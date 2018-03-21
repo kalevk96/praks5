@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+echo -n "Sisesta külje a väärtus: " #väljastab teksti
+read a #küsib väärtust
+echo -n "Sisesta külje b väärtus: "
+read b
+#
+c=`expr $a \* $a + $b \* $b` #arvutab c küle
+calc=$(echo "scale=2; sqrt ($c)" | bc )
+echo "Kolmnurga hüpotenuus on $calc"
+#
+# skripti lõpp
